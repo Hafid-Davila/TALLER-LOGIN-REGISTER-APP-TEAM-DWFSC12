@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, Button, Card,  } from 'react-bootstrap';
+import { Form, Button, Card  } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 

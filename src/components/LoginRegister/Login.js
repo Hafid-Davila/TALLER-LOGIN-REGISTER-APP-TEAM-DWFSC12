@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Form, Button, Card } from 'react-bootstrap'
+
 import { Link, useNavigate } from 'react-router-dom'
 
 function Login() {
@@ -12,6 +13,7 @@ function Login() {
     e.preventDefault();
     localStorage.setItem("email", email);
     localStorage.setItem("password", password);
+    
     navigate("/dashboard");
   };
 
