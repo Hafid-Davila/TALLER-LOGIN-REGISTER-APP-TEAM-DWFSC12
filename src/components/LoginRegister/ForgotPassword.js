@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import { Form, Button, Card } from 'react-bootstrap'
 import { Link, useNavigate } from 'react-router-dom'
-
+import Swal from 'sweetalert2'
 
 
 
@@ -15,7 +15,13 @@ function ForgotPassword() {
         e.preventDefault();
         const email = emailRef.current.value;
         localStorage.setItem("email", email);
-        navigate("/");
+        Swal.fire({
+            title: '¡Email enviado!',
+            text: 'Se ha enviado un correo electrónico para restablecer su contraseña.',
+            icon: 'success',
+            confirmButtonText: 'OK'
+        });
+        navigate("/login");
 
     };
 

@@ -7,20 +7,20 @@ function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
-  
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
     localStorage.setItem("email", email);
     localStorage.setItem("password", password);
-    
-    navigate("/todo");
+
+    navigate("/dashboard");
   };
 
   return (
     <>
       <Card className="mt-5 ">
-        <Card.Body  class="p-3 bg-secondary text-white">
+        <Card.Body class="p-3 bg-secondary text-white">
           <h2 className='text-center mb-4'>Iniciar Sesión</h2>
           <Form onSubmit={handleSubmit}>
             <Form.Group id='email'>
@@ -48,8 +48,12 @@ function Login() {
           </div>
         </Card.Body>
       </Card>
-      <div  className='w-100 text-center mt-2'>
+      <div className='w-100 text-center mt-2'>
         ¿No tienes una cuenta? <Link to="/singup">Registrarse</Link>
+      </div>
+
+      <div className="w-100 text-center mt-2">
+        <Link to="/" >U-List</Link>
       </div>
     </>
   )

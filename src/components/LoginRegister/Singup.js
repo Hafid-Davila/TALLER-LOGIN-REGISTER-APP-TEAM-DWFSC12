@@ -1,43 +1,43 @@
 import React, { useState } from 'react';
-import { Form, Button, Card  } from 'react-bootstrap';
+import { Form, Button, Card } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 
 function Singup() {
-/* Un gancho que te permite usar el estado en componentes funcionales. */
+  /* Un gancho que te permite usar el estado en componentes funcionales. */
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [passwordConfirm, setPasswordConfirm] = useState('');
   const navigate = useNavigate();
 
-/**
- * Si las variables password y passwordConfirm son iguales, el correo electrónico y la contraseña se
- * almacenan en localStorage y el usuario navega a la página de inicio. De lo contrario, se muestra un
- * mensaje de error.
- * @param event - El objeto de evento que se pasa al controlador de eventos.
- */
+  /**
+   * Si las variables password y passwordConfirm son iguales, el correo electrónico y la contraseña se
+   * almacenan en localStorage y el usuario navega a la página de inicio. De lo contrario, se muestra un
+   * mensaje de error.
+   * @param event - El objeto de evento que se pasa al controlador de eventos.
+   */
   const handleSubmit = (event) => {
- /* Evita que suceda la acción predeterminada del evento. */
-  event.preventDefault();
+    /* Evita que suceda la acción predeterminada del evento. */
+    event.preventDefault();
 
-  if (password === passwordConfirm) {
-    localStorage.setItem('email', email);
-    localStorage.setItem('password', password);
+    if (password === passwordConfirm) {
+      localStorage.setItem('email', email);
+      localStorage.setItem('password', password);
 
-    navigate('/todo');
-    
-  }  else {
-    Swal.fire({
-      icon: 'error',
-      title: 'Oops...',
-      text: 'Las contraseñas no coinciden. Por favor, inténtelo de nuevo.'
-    });
+      navigate('/dashboard');
+
+    } else {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Las contraseñas no coinciden. Por favor, inténtelo de nuevo.'
+      });
+    }
   }
-}
 
 
-/* Un componente React. formulario de registro */
+  /* Un componente React. formulario de registro */
   return (
     <>
       <Card className='mt-5'>
@@ -77,9 +77,13 @@ function Singup() {
           </Form>
         </Card.Body>
       </Card>
-    
-      <div className="w-100 text-center mt-2"> 
+
+      <div className="w-100 text-center mt-2">
         ¿Ya tienes una cuenta? <Link to="/login">Iniciar Sesión</Link>
+      </div>
+
+      <div className="w-100 text-center mt-2">
+        <Link to="/" >U-List</Link>
       </div>
     </>
   );
