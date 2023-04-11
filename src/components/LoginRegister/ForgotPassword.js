@@ -1,4 +1,4 @@
-import React, { useRef  } from 'react'
+import React, { useRef } from 'react'
 import { Form, Button, Card } from 'react-bootstrap'
 import { Link, useNavigate } from 'react-router-dom'
 
@@ -16,13 +16,13 @@ function ForgotPassword() {
         const email = emailRef.current.value;
         localStorage.setItem("email", email);
         navigate("/");
-       
-      };
+
+    };
 
     return (
         <>
-            <Card>
-                <Card.Body>
+            <Card className='mt-5'>
+                <Card.Body class="p-3 bg-secondary text-white">
                     <h2 className='text-center mb-4'>Restablecer contraseña</h2>
                     <Form onSubmit={handleSubmit}>
                         <Form.Group id='email'>
@@ -32,12 +32,16 @@ function ForgotPassword() {
                         <Button className='w-100 mt-4 btn btn-primary ' type='submit'>restablecer la contraseña</Button>
                     </Form>
                     <div className='w-100 text-center mt-3'>
-                        <Link to="/login">Iniciar Sesión</Link>
+                        <Link to="/login" style={{ color: "white" }}>Iniciar Sesión</Link>
                     </div>
                 </Card.Body>
             </Card>
             <div className='w-100 text-center mt-2'>
-                ¿No tienes una cuenta? <Link to="/singup">Registrarse</Link>
+                ¿No tienes una cuenta? <Link to="/singup" >Registrarse</Link>
+            </div>
+
+            <div className="w-100 text-center mt-2">
+                <Link to="/" >U-List</Link>
             </div>
 
         </>
