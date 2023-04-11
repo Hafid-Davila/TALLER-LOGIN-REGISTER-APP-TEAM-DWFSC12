@@ -6,6 +6,7 @@ import Login from "./Login";
 import Dashboard from "./Dashboard";
 import Home from "./Home";
 import ForgotPassword from "./ForgotPassword";
+import Todo from "./ToDoList";
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/singup" element={<Singup />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/todo" element={<Todo />} />
         </Routes>
       </div>
     </Container >

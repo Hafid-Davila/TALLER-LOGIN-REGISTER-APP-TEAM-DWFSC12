@@ -14,7 +14,7 @@ function Login() {
     localStorage.setItem("email", email);
     localStorage.setItem("password", password);
     
-    navigate("/dashboard");
+    navigate("/todo");
   };
 
   return (

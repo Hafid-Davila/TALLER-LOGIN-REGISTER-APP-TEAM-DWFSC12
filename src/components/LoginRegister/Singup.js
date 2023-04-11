@@ -25,7 +25,7 @@ function Singup() {
     localStorage.setItem('email', email);
     localStorage.setItem('password', password);
 
-    navigate('/dashboard');
+    navigate('/todo');
     
   }  else {
     Swal.fire({

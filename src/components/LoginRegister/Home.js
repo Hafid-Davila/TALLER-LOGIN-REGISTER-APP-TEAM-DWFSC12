@@ -8,8 +8,8 @@ function Home() {
 
             <Card>
                 <Card.Body>
-                    <h2 className='text-center mb-4'>Bienvenido</h2>
-                    <p className='text-center'>Esta es una aplicación de prueba para el taller de Login con React</p>
+                    <h2 className='text-center mb-4'>U-List</h2>
+                    <p className='text-center'>Esta es una aplicación de Demo para taller de Ucamp</p>
                 </Card.Body>
             </Card>
 
