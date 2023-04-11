@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { Button } from 'react-bootstrap'
 
 
@@ -35,7 +35,7 @@ const Todo = () => {
   function handleLogout() {
     //logica de como cerrar sesion
     localStorage.clear()
-    navigate('/login')
+    navigate('/')
   }
 
   return (
@@ -82,9 +82,15 @@ const Todo = () => {
         ))}
       </ul>
 
+    
       <div className='w-100 text-center mt-2'>
-        <Button variant='link' onClick={handleLogout}>Cerrar Sesión</Button>
+        <Button variant='link' onClick={handleLogout} style={{ color: "Red" }}>Cerrar Sesión</Button>
       </div>
+
+      <div className="w-100 text-center mt-2"> 
+        <Link  to="/" >U-List</Link>
+      </div>
+
 
     </div>
 

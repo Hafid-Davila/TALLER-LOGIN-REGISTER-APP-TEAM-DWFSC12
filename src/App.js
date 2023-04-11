@@ -1,12 +1,12 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import { Routes, Route } from "react-router-dom";
-import Singup from "./Singup";
-import Login from "./Login";
-import Dashboard from "./Dashboard";
-import Home from "./Home";
-import ForgotPassword from "./ForgotPassword";
-import Todo from "./ToDoList";
+import Singup from "./components/LoginRegister/Singup";
+import Login from "./components/LoginRegister/Login";
+import Dashboard from "./components/LoginRegister/Dashboard";
+import Home from "./components/LoginRegister/Home";
+import ForgotPassword from "./components/LoginRegister/ForgotPassword";
+import Todo from "./components/ToDoList";
 
 function App() {
 

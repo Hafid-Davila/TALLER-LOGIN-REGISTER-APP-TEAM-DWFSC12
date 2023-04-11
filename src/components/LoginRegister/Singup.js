@@ -41,7 +41,7 @@ function Singup() {
   return (
     <>
       <Card className='mt-5'>
-        <Card.Body>
+        <Card.Body class="p-3 bg-secondary text-white">
           <h2 className="text-center mb-4">Registro</h2>
           <Form onSubmit={handleSubmit}>
             <Form.Group id="email">

@@ -19,8 +19,8 @@ function Login() {
 
   return (
     <>
-      <Card>
-        <Card.Body>
+      <Card className="mt-5 ">
+        <Card.Body  class="p-3 bg-secondary text-white">
           <h2 className='text-center mb-4'>Iniciar Sesión</h2>
           <Form onSubmit={handleSubmit}>
             <Form.Group id='email'>
@@ -43,12 +43,12 @@ function Login() {
             </Form.Group>
             <Button className='w-100 mt-4 btn btn-primary ' type='submit'>Iniciar</Button>
           </Form>
-          <div className='w-100 text-center mt-3'>
-            <Link to="/forgot-password">Olvidé mi contraseña</Link>
+          <div className='w-100 text-center mt-3 '>
+            <Link to="/forgot-password" style={{ color: "white" }}>Olvidé mi contraseña</Link>
           </div>
         </Card.Body>
       </Card>
-      <div className='w-100 text-center mt-2'>
+      <div  className='w-100 text-center mt-2'>
         ¿No tienes una cuenta? <Link to="/singup">Registrarse</Link>
       </div>
     </>

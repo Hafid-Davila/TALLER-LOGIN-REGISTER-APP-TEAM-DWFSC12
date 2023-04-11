@@ -1,14 +1,14 @@
 import React from 'react'
-import { Card } from 'react-bootstrap'
+import { Card, Container } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
 function Home() {
     return (
         <>
 
-            <Card>
-                <Card.Body>
-                    <h2 className='text-center mb-4'>U-List</h2>
+            <Card className="mt-5 ">
+                <Card.Body class="p-3 bg-secondary text-white">
+                    <h2 className='text-center  mb-4'>U-List</h2>
                     <p className='text-center'>Esta es una aplicación de Demo para taller de Ucamp</p>
                 </Card.Body>
             </Card>
